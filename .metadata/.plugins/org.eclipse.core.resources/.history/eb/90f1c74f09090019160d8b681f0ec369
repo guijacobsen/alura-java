@@ -1,0 +1,22 @@
+
+public class TestaVariaveis {
+
+	public static void main(String[] args) {
+		
+//		System.out.println("opa");
+//		int idade = 25;
+////		int idade;
+////		idade = 25;
+//		String max = "max idade : " + idade;
+//		System.out.println("idade : " + idade);
+//		
+//		System.out.println(max);
+		
+		char valor = 65;
+		char valor2 = 85;
+		System.out.println(valor);
+		System.out.println(valor2);
+		
+	}
+	
+}

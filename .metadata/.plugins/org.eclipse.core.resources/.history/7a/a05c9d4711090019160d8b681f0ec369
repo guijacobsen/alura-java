@@ -1,0 +1,35 @@
+
+public class TestaCondicional {
+	
+	public String opa = "opa";
+
+	public static void main(String[] args) {
+		
+		System.out.println("Valor opa global : " + this.opa);
+		
+		int idade = 16;
+		int quantidadePessoas = 1;
+
+		if (idade >= 18) {
+			System.out.println("Voce eh maior de idade");
+			System.out.println("Seja bem vindo");
+		} else {
+			System.out.println("Voce eh menos de idade");
+			if( quantidadePessoas >= 2 ) {
+				System.out.println("Pode entrar pois esta acompanhado");
+			} else {
+				System.out.println("Infelizmente nao pode entrar");
+			}
+
+		}
+		
+		int zero = 0;
+		if( zero == 1 ) {
+			System.out.println("0 true");
+		} else {
+			System.out.println("0 false");
+		}
+
+	}
+
+}

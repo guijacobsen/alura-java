@@ -1,0 +1,9 @@
+
+public class TestaVariaveis {
+
+	public static void main(String[] args) {
+		System.out.println(28000*0.75);
+		System.out.println(25000*0.75);
+	}
+	
+}

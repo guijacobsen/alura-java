@@ -1,0 +1,15 @@
+
+public class CriaConta {
+
+	public static void main(String[] args) {
+		
+		Conta conta = new Conta();
+		
+		conta.saldo = 100;
+		conta.deposita(300);
+		
+		System.out.println(conta.saldo);
+		
+	}
+	
+}

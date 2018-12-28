@@ -1,0 +1,36 @@
+
+public class CriaConta {
+
+	public static void main(String[] args) {
+		
+		Conta contaDoPaulo = new Conta();
+		
+		System.out.println("Saldo Paulo: " + contaDoPaulo.saldo);
+		contaDoPaulo.deposita(300);
+		System.out.println("Paulo depositou 300");
+		System.out.println("Saldo Paulo: " + contaDoPaulo.saldo);
+		System.out.println("----------------------------");
+		if( contaDoPaulo.saca(30) ) {
+			System.out.println("Paulo Conseguiu sacar 30");
+		} else {
+			System.out.println("Paulo Nao conseguiu sacar 30");
+		}
+		System.out.println("Saldo Paulo: " + contaDoPaulo.saldo);
+		System.out.println("----------------------------");
+		
+		Conta contaDaMarcela = new Conta();
+		System.out.println("Saldo Marcela: " + contaDaMarcela.saldo);
+		contaDaMarcela.deposita(1000);
+		System.out.println("Marcela depositou 1000 reais");
+		System.out.println("Saldo Marcela: " + contaDaMarcela.saldo);
+		System.out.println("----------------------------");
+		
+		contaDaMarcela.transfere(300, contaDoPaulo);
+		System.out.println("Marcela transferiu 300 reais pro Paulo");		
+		System.out.println("Saldo Marcela: " + contaDaMarcela.saldo);
+		System.out.println("Saldo Paulo: " + contaDoPaulo.saldo);
+		System.out.println("----------------------------");
+		
+	}
+
+}
