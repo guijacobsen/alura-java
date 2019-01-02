@@ -1,20 +1,2 @@
 INDEX VERSION 1.131+/home/jonas/eclipse-workspace/.metadata/.plugins/org.eclipse.jdt.core
-1943451760.index
-1395853581.index
-3351087657.index
-911588229.index
-1704852644.index
-3121201629.index
-2562027840.index
-3404321083.index
-3843881840.index
-2990203303.index
-2814809272.index
-1201797997.index
-2734646247.index
-939793404.index
-1123767639.index
-4108186471.index
-2775910871.index
-2972892103.index
-1015296184.index
+143515321.index
