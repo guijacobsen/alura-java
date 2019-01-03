@@ -1,7 +1,7 @@
 
 // nao pode instanciar a classe
 public abstract class Funcionario {
-	
+		
 	private String nome;
 	private String cpf;
 
