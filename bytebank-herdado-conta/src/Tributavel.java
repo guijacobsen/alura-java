@@ -1,9 +1,6 @@
 
-public class Tributavel implements CalculadorImposto {
+public interface Tributavel {
 
-	@Override
-	public double getValorImporto() {
-		return 3;
-	}
+	double getValorImposto();
 
 }

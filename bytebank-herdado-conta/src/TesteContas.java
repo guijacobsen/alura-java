@@ -22,11 +22,11 @@ public class TesteContas {
 //		cc.saldo += 1000;
 //		System.out.println( "cc saldo: " + cc.getSaldo() );
 		
-		System.out.println( "cc getValorImporto: " + cc.getValorImporto() );
+		System.out.println( "cc getValorImporto: " + cc.getValorImposto() );
 		
 		SeguroDeVida segurodevida = new SeguroDeVida();
 		
-		System.out.println( "seguro de vida getValorImporto: " + segurodevida.getValorImporto() );
+		System.out.println( "seguro de vida getValorImporto: " + segurodevida.getValorImposto() );
 		
 		
 	}

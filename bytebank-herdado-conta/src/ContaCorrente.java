@@ -1,12 +1,8 @@
 
-public class ContaCorrente extends Conta implements CalculadorImposto {
-	
-	private Tributavel tributavel;
-	
+public class ContaCorrente extends Conta implements Tributavel {
 
 	public ContaCorrente(int agencia, int numero) {
 		super(agencia, numero);
-		this.tributavel = new Tributavel();
 	}
 	
 	@Override
@@ -21,8 +17,8 @@ public class ContaCorrente extends Conta implements CalculadorImposto {
 	}
 
 	@Override
-	public double getValorImporto() {
-		return this.tributavel.getValorImporto();
+	public double getValorImposto() {
+		return super.saldo * 0.01;
 	} 
 	
 }
