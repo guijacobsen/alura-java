@@ -9,18 +9,24 @@ public class TesteContas {
 		ContaPoupanca cp = new ContaPoupanca(2222, 3333);
 		cp.deposita(200);
 		
-		System.out.println( "cc saldo: " + cc.getSaldo() );
-		System.out.println( "cp saldo: " + cp.getSaldo() );
+//		System.out.println( "cc saldo: " + cc.getSaldo() );
+//		System.out.println( "cp saldo: " + cp.getSaldo() );
+//		
+//		cc.transfere(10, cp);
+//		
+////		cp.transfere(2, cc);
+//		
+//		System.out.println( "cc saldo: " + cc.getSaldo() );
+//		System.out.println( "cp saldo: " + cp.getSaldo() );
+//		
+//		cc.saldo += 1000;
+//		System.out.println( "cc saldo: " + cc.getSaldo() );
 		
-		cc.transfere(10, cp);
+		System.out.println( "cc getValorImporto: " + cc.getValorImporto() );
 		
-//		cp.transfere(2, cc);
+		SeguroDeVida segurodevida = new SeguroDeVida();
 		
-		System.out.println( "cc saldo: " + cc.getSaldo() );
-		System.out.println( "cp saldo: " + cp.getSaldo() );
-		
-		cc.saldo += 1000;
-		System.out.println( "cc saldo: " + cc.getSaldo() );
+		System.out.println( "seguro de vida getValorImporto: " + segurodevida.getValorImporto() );
 		
 		
 	}
