@@ -1,15 +1,14 @@
 
 public class Fluxo {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		System.out.println("--- inicio main ---");
 		try {
 			metodo1(0);
 		} catch( Exception ex ) {
-//			NullPointerException
-//			ArithmeticException
 			System.out.println("-----------");
 			System.out.println( "Exception: " + ex.getMessage() );
+			
 			
 			ex.printStackTrace();
 			
@@ -18,13 +17,14 @@ public class Fluxo {
 		System.out.println("--- final main ---");
 	}
 	
-	private static void metodo1(int i) {
+	private static void metodo1(int i) throws Exception {
 		System.out.println("--- inicio metodo1 ---");
 		System.out.println("i : " + i);
 		
-		metodo1(++i);
+//		metodo1(++i);
 		
-//		throw new MinhaExcecao("Error opaaaa");
+		throw new MinhaExcecao("Error opaaaa");
+//		throw new MinhaExcecaoException("Error opaaaa");
 		
 //		Conta conta = new Conta();
 ////		Conta conta = null;
