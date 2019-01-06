@@ -3,11 +3,21 @@ package br.com.bytebank.banco.modelo;
 public abstract class Conta {
 
 	protected double saldo;
+	public double saldoVisivel;
 	private int agencia;
 	private int numero;
 	private Cliente titular;
 	
+	
 	private static int total;
+	
+	/**
+	 * Construtor da classe Conta 
+	 * 
+	 * @param agencia
+	 * @param numero
+	 *
+	 */
 	
 	public Conta(int agencia, int numero) {
 		System.out.println("-----------------");
