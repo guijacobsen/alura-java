@@ -10,6 +10,9 @@ public class TesteContas {
 		
 		ContaCorrente cc = new ContaCorrente(1111, 2222);
 		cc.deposita(100);
+		
+		System.out.println(cc.get1() );
+		System.out.println(ContaCorrente.get1() );
 		 
 		
 		ContaPoupanca cp = new ContaPoupanca(2222, 3333);
