@@ -1,37 +1,37 @@
 package br.com.bytebank.banco.teste.util;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 import br.com.bytebank.banco.modelo.Cliente;
 import br.com.bytebank.banco.modelo.Conta;
 import br.com.bytebank.banco.modelo.ContaCorrente;
 import br.com.bytebank.banco.modelo.ContaPoupanca;;
 
-public class TesteUtilArrayListGenerics {
+public class TesteUtilArrayListEquals {
 	
 	public static void main(String[] args) {
 		
-		ArrayList<Conta> contas = new ArrayList();
-//		ArrayList<Conta> contas = new ArrayList<Conta>();
-		System.out.println("contas.size() : " + contas.size());
+//		ArrayList<Conta> contas = new ArrayList<>();
+		LinkedList<Conta> contas = new LinkedList<>();
 		
 		ContaCorrente cc1 = new ContaCorrente(123, 456);
-		ContaCorrente cc2 = new ContaCorrente(123, 567);
-		ContaPoupanca cp1 = new ContaPoupanca(123, 678);
+		ContaPoupanca cp1 = new ContaPoupanca(123, 789);
+		
 		ContaPoupanca cp2 = new ContaPoupanca(123, 789);
 		
-		Cliente cli1 = new Cliente();
-		
 		contas.add(cc1);
-		contas.add(cc2);
 		contas.add(cp1);
-		contas.add(cp2);
 		
-		System.out.println("contas.size() : " + contas.size());
 		
 		for( Conta c: contas ) {
 			System.out.println(c);
 		}
+		
+		System.out.println("-----------------");
+		
+		System.out.println( "array contas contem cp2? " + contas.contains(cp2) );
+		
 		
 	}
 

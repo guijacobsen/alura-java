@@ -1,6 +1,6 @@
 package br.com.bytebank.banco.modelo;
 
-public abstract class Conta {
+public abstract class Conta extends Object {
 
 	protected double saldo;
 	public double saldoVisivel;
@@ -20,12 +20,9 @@ public abstract class Conta {
 	 */
 	
 	public Conta(int agencia, int numero) {
-		System.out.println("-----------------");
-		System.out.println("construtor conta");
 		Conta.total++;		
 		this.agencia = agencia;
-		this.numero = numero;		
-		System.out.println("-----------------");
+		this.numero = numero;
 	}
 	
 	public abstract void deposita(double valor);
@@ -76,5 +73,20 @@ public abstract class Conta {
 	
 	public static int getTotal() {
 		return Conta.total;
+	}
+	
+	public boolean ehIgual(Conta conta) {
+		return ( (conta.getAgencia() == this.getAgencia()) && (conta.getNumero() == this.getNumero()) );
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		Conta conta = (Conta) obj;
+		return ( (conta.getAgencia() == this.getAgencia()) && (conta.getNumero() == this.getNumero()) );
+	}
+	
+	@Override
+	public String toString() {
+		return "Conta - ag: " + this.getAgencia() + " num: " + this.getNumero();
 	}
 }
