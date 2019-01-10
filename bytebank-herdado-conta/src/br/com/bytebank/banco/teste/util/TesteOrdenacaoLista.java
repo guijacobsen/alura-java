@@ -37,7 +37,8 @@ public class TesteOrdenacaoLista {
 		}
 		System.out.println("-----------------");		
 		
-		NumeroDaContaComparator comparator = new NumeroDaContaComparator();
+		// Function Object
+		NumeroDaContaComparator2 comparator = new NumeroDaContaComparator2();
 		
 		lista.sort(comparator);
 		
@@ -49,7 +50,7 @@ public class TesteOrdenacaoLista {
 	
 }
 
-class NumeroDaContaComparator implements Comparator<Conta> {
+class NumeroDaContaComparator2 implements Comparator<Conta> {
 
 	@Override
 	public int compare(Conta o1, Conta o2) {
