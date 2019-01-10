@@ -43,8 +43,7 @@ public class TesteOrdenacaoString {
 		lista.add(cc3);
 		lista.add(cc4);
 		
-		NumeroDaContaComparator comparator = new NumeroDaContaComparator();
-		TitularDaContaComparator titularComparator = new TitularDaContaComparator();
+
 		
 		System.out.println("Listagem original:");
 		for( Conta c : lista ) {
@@ -52,7 +51,9 @@ public class TesteOrdenacaoString {
 		}
 		System.out.println("-----------------------------");
 		
-		lista.sort(comparator);
+//		NumeroDaContaComparator comparator = new NumeroDaContaComparator();
+//		lista.sort(comparator);
+		lista.sort(new NumeroDaContaComparator());
 		System.out.println("Listagem ordenando por conta:");
 		for( Conta c : lista ) {
 			System.out.println(c.getAgencia() + "-" + c.getNumero() + " - " + c.getTitular().getNome());
@@ -60,7 +61,7 @@ public class TesteOrdenacaoString {
 		System.out.println("-----------------------------");
 		
 		System.out.println("Listagem ordenando por nome:");
-				
+		TitularDaContaComparator titularComparator = new TitularDaContaComparator();				
 		lista.sort(titularComparator);
 		for( Conta c : lista ) {
 			System.out.println(c.getAgencia() + "-" + c.getNumero() + " - " + c.getTitular().getNome());
@@ -88,13 +89,17 @@ class NumeroDaContaComparator implements Comparator<Conta> {
 	@Override
 	public int compare(Conta o1, Conta o2) {
 		
-		if( o1.getNumero() < o2.getNumero() ) {
-			return -1;
-		}
-		if( o1.getNumero() > o2.getNumero() ) {
-			return 1;
-		}		
-		return 0;
+		return Integer.compare(o1.getNumero(), o2.getNumero());
+		
+//		return o1.getNumero() - o2.getNumero();
+		
+//		if( o1.getNumero() < o2.getNumero() ) {
+//			return -1;
+//		}
+//		if( o1.getNumero() > o2.getNumero() ) {
+//			return 1;
+//		}		
+//		return 0;
 	}
 	
 }
