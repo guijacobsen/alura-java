@@ -1,6 +1,7 @@
 package br.com.bytebank.banco.teste.util;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 
 import br.com.bytebank.banco.modelo.Cliente;
@@ -43,29 +44,61 @@ public class TesteOrdenacaoString {
 		lista.add(cc3);
 		lista.add(cc4);
 		
-
-		
-		System.out.println("Listagem original:");
-		for( Conta c : lista ) {
-			System.out.println(c.getAgencia() + "-" + c.getNumero() + " - " + c.getTitular().getNome());
-		}
-		System.out.println("-----------------------------");
+//		System.out.println("Listagem original:");
+//		for( Conta c : lista ) {
+//			System.out.println(c.getAgencia() + "-" + c.getNumero() + " - " + c.getTitular().getNome());
+//		}
+//		System.out.println("-----------------------------");
 		
 //		NumeroDaContaComparator comparator = new NumeroDaContaComparator();
 //		lista.sort(comparator);
-		lista.sort(new NumeroDaContaComparator());
-		System.out.println("Listagem ordenando por conta:");
+//		lista.sort(new NumeroDaContaComparator());
+//		System.out.println("Listagem ordenando por conta:");
+//		for( Conta c : lista ) {
+//			System.out.println(c.getAgencia() + "-" + c.getNumero() + " - " + c.getTitular().getNome());
+//		}
+//		System.out.println("-----------------------------");
+//		
+//		System.out.println("Listagem ordenando por nome:");
+//		TitularDaContaComparator titularComparator = new TitularDaContaComparator();				
+//		lista.sort(titularComparator);
+//		for( Conta c : lista ) {
+//			System.out.println(c.getAgencia() + "-" + c.getNumero() + " - " + c.getTitular().getNome());
+//		}
+		
+//		Collections.sort(lista, new NumeroDaContaComparator());
+//		System.out.println("Listagem ordenando por conta:");
+//		for( Conta c : lista ) {
+//			System.out.println(c.getAgencia() + "-" + c.getNumero() + " - " + c.getTitular().getNome());
+//		}
+//		System.out.println("-----------------------------");
+//		Collections.sort(lista, new TitularDaContaComparator());
+//		System.out.println("Listagem ordenando por nome:");
+//		for( Conta c : lista ) {
+//			System.out.println(c.getAgencia() + "-" + c.getNumero() + " - " + c.getTitular().getNome());
+//		}
+//		System.out.println("-----------------------------");
+		
+//		Collections.reverse(lista);
+		
+//		Collections.sort(lista);
+		
+		lista.sort(null);
+		
+		
+		
 		for( Conta c : lista ) {
-			System.out.println(c.getAgencia() + "-" + c.getNumero() + " - " + c.getTitular().getNome());
+			System.out.println(c + " - " + c.getTitular().getNome());
 		}
 		System.out.println("-----------------------------");
+		Collections.rotate(lista, 3);
 		
-		System.out.println("Listagem ordenando por nome:");
-		TitularDaContaComparator titularComparator = new TitularDaContaComparator();				
-		lista.sort(titularComparator);
+		Collections.shuffle(lista);
+		
 		for( Conta c : lista ) {
-			System.out.println(c.getAgencia() + "-" + c.getNumero() + " - " + c.getTitular().getNome());
+			System.out.println(c + " - " + c.getTitular().getNome());
 		}
+		System.out.println("-----------------------------");
 		
 	}
 	
