@@ -9,19 +9,23 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
+import java.net.Socket;
 
 public class TesteSaida {
 
 	public static void main(String[] args) throws IOException {
 		
+//		Socket socket = new Socket();
 //		InputStream fis = new FileInputStream("lorem.txt");
 		InputStream fis = System.in;
+//		InputStream fis = socket.getInputStream();
 		InputStreamReader isr = new InputStreamReader(fis);
 		BufferedReader br = new BufferedReader(isr);
 		
-//		OutputStream fow = new FileOutputStream("loram-saida.txt");
-		OutputStream fow = System.out;
-		OutputStreamWriter osw = new OutputStreamWriter(fow);
+//		OutputStream fos = new FileOutputStream("loram-saida.txt");
+		OutputStream fos = System.out;
+//		OutputStream fos = socket.getOutputStream();
+		OutputStreamWriter osw = new OutputStreamWriter(fos);
 		BufferedWriter bw = new BufferedWriter(osw);
 		
 		String linha = br.readLine();
