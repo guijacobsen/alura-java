@@ -14,6 +14,8 @@ public class TesteEscritaPrintStreamPrintWriter {
 
 	public static void main(String[] args) throws IOException {
 		
+		long ini = System.currentTimeMillis();
+		
 //		PrintStream ps = new PrintStream("lorem-printStream.txt");
 		PrintWriter ps = new PrintWriter("lorem-printStream.txt");
 
@@ -22,6 +24,10 @@ public class TesteEscritaPrintStreamPrintWriter {
 		ps.print("Lorem ipsum dolor sit amet, consectetur adipiscing sasasasa sasas");
 		
 		ps.close();
+		
+		long fim = System.currentTimeMillis();
+		
+		System.out.println("Tempo de execucao em milisegundos: " + (fim - ini));
 		
 		
 	}
