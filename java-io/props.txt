@@ -1,0 +1,5 @@
+#Comentario props
+#Sat Jan 12 18:55:33 BRST 2019
+host=www.jonaspass.com.br
+user=jonas
+passw=jonaspass
