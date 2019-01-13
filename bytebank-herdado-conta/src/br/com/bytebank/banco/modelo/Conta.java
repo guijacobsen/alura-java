@@ -8,7 +8,7 @@ public abstract class Conta extends Object implements Comparable<Conta>, Seriali
 	public double saldoVisivel;
 	private int agencia;
 	private int numero;
-	private Cliente titular;
+	private transient Cliente titular;
 	
 	
 	private static int total;

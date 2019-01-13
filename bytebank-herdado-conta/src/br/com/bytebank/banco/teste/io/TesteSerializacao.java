@@ -19,7 +19,7 @@ public class TesteSerializacao {
 //		cliente.setNome("Guilherme Jacobsen");
 //		cliente.setProfissao("Developer");
 //		cliente.setCpf("43131637862");
-//		
+////		
 //		ContaCorrente cc = new ContaCorrente(222, 333);
 //		cc.deposita(222.3);
 //		cc.setTitular(cliente);
@@ -34,7 +34,7 @@ public class TesteSerializacao {
 		
 		System.out.println( "Leitura de cc.bin completo." );
 		System.out.println( cc.getSaldo() );
-		System.out.println( cc.getTitular().getNome() );
+		System.out.println( cc.getTitular() );
 		
 	}
 

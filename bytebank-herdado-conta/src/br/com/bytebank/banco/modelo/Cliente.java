@@ -2,7 +2,7 @@ package br.com.bytebank.banco.modelo;
 
 import java.io.Serializable;
 
-public class Cliente implements Serializable {
+public class Cliente  {
 
 	private String nome;
 	private String cpf;
