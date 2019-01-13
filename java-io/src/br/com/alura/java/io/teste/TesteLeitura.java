@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.nio.charset.StandardCharsets;
 
 public class TesteLeitura {
 
@@ -17,8 +18,9 @@ public class TesteLeitura {
 //		InputStreamReader isr = new InputStreamReader(fis);
 		
 		InputStream fis = new FileInputStream("lorem.txt");
-		Reader isr = new InputStreamReader(fis);
-		
+//		Reader isr = new InputStreamReader(fis);		
+//		Reader isr = new InputStreamReader(fis, "UTF-8");
+		Reader isr = new InputStreamReader(fis, StandardCharsets.UTF_8.name());
 		BufferedReader br = new BufferedReader(isr);
 		
 		String linha = br.readLine();

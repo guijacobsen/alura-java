@@ -2,6 +2,9 @@ package br.com.alura.java.io.teste;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.charset.CharsetEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.Locale;
 import java.util.Scanner;
@@ -10,7 +13,8 @@ public class TesteLeituraScanner {
 
 	public static void main(String[] args) throws IOException {
 		
-		Scanner scanner = new Scanner(new File("contas.csv"));
+//		Scanner scanner = new Scanner(new File("contas.csv"));
+		Scanner scanner = new Scanner(new File("contas.csv"), "UTF-8");
 		
 //		String linha = scanner.nextLine();
 //		System.out.println(linha);

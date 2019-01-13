@@ -17,9 +17,11 @@ public class TesteEscritaPrintStreamPrintWriter {
 		long ini = System.currentTimeMillis();
 		
 //		PrintStream ps = new PrintStream("lorem-printStream.txt");
-		PrintWriter ps = new PrintWriter("lorem-printStream.txt");
+//		PrintWriter ps = new PrintWriter("lorem-printStream.txt");
+//		PrintWriter ps = new PrintWriter("lorem-printStream.txt", "UTF-8");
+		PrintWriter ps = new PrintWriter("lorem-printStream.txt", "ASCII");
 
-		ps.println("Lorem ipsum dolor sit amet, consectetur adipiscing elit,");
+		ps.println("Lorem ipsum dolor sit amet, conéão É íççç ç opa ç  sectetur adipiscing elit,");
 		ps.println();
 		ps.print("Lorem ipsum dolor sit amet, consectetur adipiscing sasasasa sasas");
 		
