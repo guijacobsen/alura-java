@@ -1,0 +1,23 @@
+<html>
+<head></head>
+<body>
+
+<p>Bem vindo.</p>
+<a href="index.html">
+	Ir para pagina inicial
+</a><br>
+<a href="http://guilhermejacobsen.com/" target="_blank" onclick=aOnclick(event)>
+	Ver um projetinho legal em React
+</a>
+<script>
+	function aOnclick(event) {
+		event.preventDefault();
+		
+		if( confirm('Ir para link?') ) {
+			var link = document.getElementsByTagName('a')[1].getAttribute('href');
+			window.open(link,'_blank');
+		}
+	}
+</script>
+</body>
+</html>
