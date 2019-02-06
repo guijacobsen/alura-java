@@ -17,12 +17,14 @@ public class NovaEmpresaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		System.out.println("Cadastrando nova empresa");
+		
+		String nomeEmpresa = request.getParameter("nome");		
+		
 		PrintWriter out = response.getWriter();
 		out.println("<html>");
 		out.println("<body>");
-		out.println("Cadatro nova empresa");
+		out.println("Cadatro empresa: " + nomeEmpresa);
 		out.println("</body>");
 		out.println("<html>");
 		
