@@ -14,9 +14,7 @@
 	<%
 		List<Empresa> lista = (List)request.getAttribute("listaEmpresas");
 		for( Empresa e : lista ) {
-			out.println("<li>");
-			out.println(e.getNome());
-			out.println("</li>");
+			out.println("<li>" + e.getNome() + "</li>");
 		}
 	%>
 </ul>

@@ -1,10 +1,5 @@
-<%
-String nomeEmpresa = (String)request.getAttribute("empresa");
-System.out.println(nomeEmpresa);
-%>
-
 <html>
 	<body>
-		Cadatro empresa: <% out.println(nomeEmpresa); %>
+		Cadatro empresa: ${ empresa }
 	</body>
 </html>
