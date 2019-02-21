@@ -1,5 +1,14 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <html>
 	<body>
-		Cadatro empresa: ${ empresa }
+	
+		<c:if test="${ not empty empresa }">
+			Cadatro empresa: ${ empresa }
+		</c:if>
+		
+		<c:if test="${ empty empresa }">
+			Nenhuma empresa cadastrada
+		</c:if>
 	</body>
 </html>
