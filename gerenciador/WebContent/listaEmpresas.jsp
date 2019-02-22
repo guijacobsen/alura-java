@@ -2,6 +2,7 @@
 <%@page import="br.com.alura.gerenciador.servlet.Empresa"%>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -18,19 +19,23 @@
 	<ul>
 		
 		<c:forEach items="${listaEmpresas}" var="e">
-			<li>${ e.getNome() } - ${ e.nome }</li>
+			 
+			<li>
+				${ e.getNome() } 
+				<fmt:formatDate value="${ e.getDataAbertura() }" />
+			</li>
 		</c:forEach>
 	
 	</ul>
 
-	<ul>
+	<%-- <ul>
 		<%
 			List<Empresa> lista = (List)request.getAttribute("listaEmpresas");
 			for( Empresa e : lista ) {
 				out.println("<li>" + e.getNome() + "</li>");
 			}
 		%>
-	</ul>
+	</ul> --%>
 
 </body>
 </html>

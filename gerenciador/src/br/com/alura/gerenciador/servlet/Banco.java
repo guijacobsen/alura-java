@@ -14,12 +14,12 @@ public class Banco {
 		Empresa empresa2 = new Empresa();
 		empresa2.setNome("Caelum");
 		
-		Empresa empresa3 = new Empresa();
-		empresa3.setNome("Caelum");
+//		Empresa empresa3 = new Empresa();
+//		empresa3.setNome("Caelum");
 		
 		lista.add(empresa);
 		lista.add(empresa2);
-		lista.add(empresa3);
+//		lista.add(empresa3);
 	}
 
 	public void adiciona(Empresa empresa) {
