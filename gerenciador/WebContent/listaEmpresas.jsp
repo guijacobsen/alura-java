@@ -14,6 +14,10 @@
 </head>
 <body>
 
+	<c:if test="${ not empty empresa }">
+		Cadatro empresa: ${ empresa }
+	</c:if>
+	
 	<p>Lista de empresas</p>
 	
 	<ul>
