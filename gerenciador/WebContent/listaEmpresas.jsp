@@ -31,7 +31,7 @@
 				${ e.getNome() } 
 				<fmt:formatDate value="${ e.getDataAbertura() }" pattern="dd/MM/yyyy" /> 
 				<a href="/gerenciador/removeEmpresa?id=${ e.getId() }">remover</a> 
-				<a href="/gerenciador/editarEmpresa">editar</a>
+				<a href="/gerenciador/mostrarEmpresa?id=${ e.getId() }">editar</a>
 			</li>
 		</c:forEach>
 	
