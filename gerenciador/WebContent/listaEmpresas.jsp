@@ -32,14 +32,5 @@
 	
 	</ul>
 
-	<%-- <ul>
-		<%
-			List<Empresa> lista = (List)request.getAttribute("listaEmpresas");
-			for( Empresa e : lista ) {
-				out.println("<li>" + e.getNome() + "</li>");
-			}
-		%>
-	</ul> --%>
-
 </body>
 </html>

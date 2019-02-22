@@ -24,23 +24,10 @@ public class ListaEmpresasServlet extends HttpServlet {
 		Banco banco = new Banco();
 		List<Empresa> lista = banco.getEmpresas();
 		
-//		response.getWriter().append("Served at: ").append(request.getContextPath());
-		
 		RequestDispatcher rd = request.getRequestDispatcher("/listaEmpresas.jsp");
 		request.setAttribute("listaEmpresas", lista);
 		rd.forward(request, response);
-		
-//		PrintWriter out = response.getWriter();		
-//		String html = "<html>";
-//		html += "<body>";
-//		html += "<ul>";
-//			for( Empresa e: lista ) {
-//				html += "<li>" + e.getNome() + "</li>";
-//			}
-//		html += "</ul>";		
-//		html += "</body>";
-//		html += "</html>";
-//		out.println(html);
+
 		
 	}
 
