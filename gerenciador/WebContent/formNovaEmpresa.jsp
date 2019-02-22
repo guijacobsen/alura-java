@@ -16,6 +16,10 @@
 			Nome : <input type="text" name="nome" />
 		</label>
 		
+		<label>
+			Data Abertura : <input type="text" name="data" />
+		</label>
+		
 		<input type="submit" value="Enviar" />
 		
 	</form>

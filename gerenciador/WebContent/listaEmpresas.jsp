@@ -22,7 +22,7 @@
 			 
 			<li>
 				${ e.getNome() } 
-				<fmt:formatDate value="${ e.getDataAbertura() }" />
+				<fmt:formatDate value="${ e.getDataAbertura() }" pattern="dd/MM/yyyy" />
 			</li>
 		</c:forEach>
 	
