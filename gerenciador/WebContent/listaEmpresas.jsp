@@ -6,6 +6,9 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%-- <c:url value="/novaEmpresa" var="linkServletNovaEmpresa" /> --%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +29,9 @@
 			 
 			<li>
 				${ e.getNome() } 
-				<fmt:formatDate value="${ e.getDataAbertura() }" pattern="dd/MM/yyyy" />
+				<fmt:formatDate value="${ e.getDataAbertura() }" pattern="dd/MM/yyyy" /> 
+				<a href="/gerenciador/removeEmpresa?id=${ e.getId() }">remover</a> 
+				<a href="/gerenciador/editarEmpresa">editar</a>
 			</li>
 		</c:forEach>
 	
