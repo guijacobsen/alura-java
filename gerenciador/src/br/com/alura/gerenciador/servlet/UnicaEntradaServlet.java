@@ -28,34 +28,34 @@ public class UnicaEntradaServlet extends HttpServlet {
 		String paramAcao = request.getParameter("acao");
 		String nome = null;
 		
-		if( paramAcao.equals("listaEmpresas") ) {
+		if( paramAcao.equals("ListaEmpresas") ) {
 			System.out.println("Listando empresas");
 			
 			ListaEmpresas acao = new ListaEmpresas();
 			nome = acao.executa(request, response);
 			
-		} else if( paramAcao.equals("removeEmpresa") ) {
+		} else if( paramAcao.equals("RemoveEmpresa") ) {
 			System.out.println("Removendo empresa");
 			
 			RemoveEmpresa acao = new RemoveEmpresa();
 			nome = acao.executa(request, response);
 			
-		} else if( paramAcao.equals("mostraEmpresa") ) {
+		} else if( paramAcao.equals("MostraEmpresa") ) {
 			System.out.println("Mostrando empresa");
 			
 			MostraEmpresa acao = new MostraEmpresa();
 			nome = acao.executa(request, response);
-		} else if( paramAcao.equals("alteraEmpresa") ) {
+		} else if( paramAcao.equals("AlteraEmpresa") ) {
 			System.out.println("Alterando empresa");
 			
 			AlteraEmpresa acao = new AlteraEmpresa();
 			nome = acao.executa(request, response);
-		} else if( paramAcao.equals("novaEmpresa") ) {
+		} else if( paramAcao.equals("NovaEmpresa") ) {
 			System.out.println("Nova empresa");
 			
 			NovaEmpresa acao = new NovaEmpresa();
 			nome = acao.executa(request, response);
-		} else if( paramAcao.equals("formNovaEmpresa") ) {
+		} else if( paramAcao.equals("NovaEmpresaForm") ) {
 			System.out.println("Nova Empresa Form");
 			
 			NovaEmpresaForm acao = new NovaEmpresaForm();

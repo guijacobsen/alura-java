@@ -19,7 +19,7 @@ public class RemoveEmpresa {
 		Banco banco = new Banco();
 		banco.removeEmpresa(id);
 		
-		return "redirect:entrada?acao=listaEmpresas";
+		return "redirect:entrada?acao=ListaEmpresas";
 	}
 	
 }

@@ -36,7 +36,7 @@ public class NovaEmpresa {
 		Banco banco = new Banco();
 		banco.adiciona(empresa);
 		
-		return "redirect:entrada?acao=listaEmpresas";
+		return "redirect:entrada?acao=ListaEmpresas";
 		
 	}
 	
