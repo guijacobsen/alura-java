@@ -25,35 +25,45 @@ public class UnicaEntradaServlet extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String paramAcao = request.getParameter("acao");
+		String nome = null;
 		
 		if( paramAcao.equals("listaEmpresas") ) {
 			System.out.println("Listando empresas");
 			
 			ListaEmpresas acao = new ListaEmpresas();
-			acao.executa(request, response);
+			nome = acao.executa(request, response);
 			
 		} else if( paramAcao.equals("removeEmpresa") ) {
 			System.out.println("Removendo empresa");
 			
 			RemoveEmpresa acao = new RemoveEmpresa();
-			acao.executa(request, response);
+			nome = acao.executa(request, response);
 			
 		} else if( paramAcao.equals("mostraEmpresa") ) {
 			System.out.println("Mostrando empresa");
 			
 			MostraEmpresa acao = new MostraEmpresa();
-			acao.executa(request, response);
+			nome = acao.executa(request, response);
 		} else if( paramAcao.equals("alteraEmpresa") ) {
 			System.out.println("Alterando empresa");
 			
 			AlteraEmpresa acao = new AlteraEmpresa();
-			acao.executa(request, response);
+			nome = acao.executa(request, response);
 		} else if( paramAcao.equals("novaEmpresa") ) {
 			System.out.println("Nova empresa");
 			
 			NovaEmpresa acao = new NovaEmpresa();
-			acao.executa(request, response);
+			nome = acao.executa(request, response);
 		}
+		
+		String[] tipoEEndereco = nome.split(":");
+		if( tipoEEndereco[0].equals("forward") ) {			
+			RequestDispatcher rd = request.getRequestDispatcher(tipoEEndereco[1]);
+			rd.forward(request, response);
+		} else {
+			response.sendRedirect(tipoEEndereco[1]);
+		}
+		
 		
 	}
 
