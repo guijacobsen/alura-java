@@ -1,5 +1,5 @@
 <%@page import="java.util.List"%>
-<%@page import="br.com.alura.gerenciador.servlet.Empresa"%>
+<%@page import="br.com.alura.gerenciador.modelo.Empresa"%>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
@@ -30,8 +30,8 @@
 			<li>
 				${ e.getNome() } 
 				<fmt:formatDate value="${ e.getDataAbertura() }" pattern="dd/MM/yyyy" /> 
-				<a href="/gerenciador/removeEmpresa?id=${ e.getId() }">remover</a> 
-				<a href="/gerenciador/mostrarEmpresa?id=${ e.getId() }">editar</a>
+				<a href="/gerenciador/entrada?acao=removeEmpresa&id=${ e.getId() }">remover</a> 
+				<a href="/gerenciador/entrada?acao=mostraEmpresa&id=${ e.getId() }">editar</a>
 			</li>
 		</c:forEach>
 	
