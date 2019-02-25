@@ -17,6 +17,8 @@
 </head>
 <body>
 
+	<p>Usuario logado: ${usuarioLogado.login } </p>
+
 	<c:if test="${ not empty empresa }">
 		Cadatro empresa: ${ empresa }
 	</c:if>
